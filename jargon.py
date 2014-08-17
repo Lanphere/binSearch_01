@@ -35,7 +35,7 @@ def binSearch(word):
       print ('hmmm, something is terribly wrong here.')
 
 def main():
-  binSearch('squirrelcide')
+  binSearch('Amiga')
 
 
 

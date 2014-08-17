@@ -19,21 +19,20 @@ def binSearch(word):
   mid = (len(myList))//2
   low = myList.index(myList[0])
   high = myList.index(myList[-1])
-  print ('init low value is {}, init mid value is {}, init high value is {}'.format(low, mid, high))
-  print ('word index is {}'.format(myList.index(word)))
+  print ('init low value is {}, init mid value is {}, init high value is {}'.format(low, mid, high)) #test print
+  print ('word index is {}'.format(myList.index(word))) #test print
   searches = 2100
   while searches > 0:
     if myList[mid] == word:
       print ('found the word ' + word + ' in here!')
-      Searching = False
     elif myList[mid] > word:
       high = mid
       mid = (high+low)//2
-      print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high))
+      print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high)) #test print
     elif myList[mid] < word:
-      low= mid
+      low = mid
       mid = (high+low)//2
-      print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high))
+      print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high)) #test print
     else:
       print ('hmmm, something is terribly wrong here.')
     searches -= 1

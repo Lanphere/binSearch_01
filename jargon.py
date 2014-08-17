@@ -2,7 +2,7 @@
 import re
 
 def readList():
-  '''read a sorted txt into memory'''
+  '''read a sorted txt into memory, eliminate some chars'''
   f = open('jargonStripped.txt')
   lines = f.readlines()
   jList = []
@@ -22,6 +22,7 @@ def binSearch(word):
   while high - low > 1:
     if myList[mid] == word:
       print ('found the word ' + word + ' in here!')
+      break
     elif myList[mid] > word:
       high = mid
       mid = (high+low)//2
@@ -34,7 +35,7 @@ def binSearch(word):
       print ('hmmm, something is terribly wrong here.')
 
 def main():
-  binSearch('bigot')
+  binSearch('squirrelcide')
 
 
 

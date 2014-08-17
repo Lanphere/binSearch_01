@@ -1,8 +1,6 @@
 
 import re
 
-
-
 def readList():
   '''read a sorted txt into memory'''
   f = open('jargonStripped.txt')
@@ -21,8 +19,7 @@ def binSearch(word):
   high = myList.index(myList[-1])
   print ('init low value is {}, init mid value is {}, init high value is {}'.format(low, mid, high)) #test print
   print ('word index is {}'.format(myList.index(word))) #test print
-  searches = 2100
-  while searches > 0:
+  while high - low > 1:
     if myList[mid] == word:
       print ('found the word ' + word + ' in here!')
     elif myList[mid] > word:
@@ -35,10 +32,10 @@ def binSearch(word):
       print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high)) #test print
     else:
       print ('hmmm, something is terribly wrong here.')
-    searches -= 1
 
 def main():
-  binSearch('heatseeker')
+  binSearch('alt')
+
 
 
 if __name__=="__main__":

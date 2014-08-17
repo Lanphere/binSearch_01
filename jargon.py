@@ -6,7 +6,7 @@ def readList():
   f = open('jargonStripped.txt')
   lines = f.readlines()
   jList = []
-  for line in lines[:2100]:
+  for line in lines:
     match = re.search(r'(\w+)', line)
     jList.append(match.group(0))
   return jList
@@ -34,7 +34,7 @@ def binSearch(word):
       print ('hmmm, something is terribly wrong here.')
 
 def main():
-  binSearch('alt')
+  binSearch('bigot')
 
 
 

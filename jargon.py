@@ -31,14 +31,15 @@ def binSearch(word):
       mid = (high+low)//2
       print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high))
     elif myList[mid] < word:
-      low, mid = mid, (high+low)//2
+      low= mid
+      mid = (high+low)//2
       print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high))
     else:
       print ('hmmm, something is terribly wrong here.')
     searches -= 1
 
 def main():
-  binSearch('dumbass')
+  binSearch('heatseeker')
 
 
 if __name__=="__main__":

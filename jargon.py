@@ -2,7 +2,7 @@
 import re
 
 def readList():
-  '''read a sorted txt into memory, eliminate some chars'''
+  '''read a sorted txt into memory, eliminate some extra chars'''
   f = open('jargonStripped.txt')
   lines = f.readlines()
   jList = []
@@ -35,7 +35,7 @@ def binSearch(word):
       print ('hmmm, something is terribly wrong here.')
 
 def main():
-  binSearch('Amiga')
+  binSearch('molly')
 
 
 

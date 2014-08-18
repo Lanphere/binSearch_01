@@ -2,8 +2,8 @@
 import re
 
 def readList():
-  '''read a sorted txt into memory, eliminate some extra chars'''
-  f = open('jargonStripped.txt')
+  '''read a sorted txt into memory, eliminate some extra chars in txt'''
+  f = open('jargonStripped.txt', 'r')
   lines = f.readlines()
   jList = []
   for line in lines:
@@ -15,13 +15,13 @@ def binSearch(word):
   '''do a binary search'''
   myList = readList()
   mid = (len(myList))//2
-  low = myList.index(myList[0])
-  high = myList.index(myList[-1])
+  low = 0
+  high = len(myList)
   print ('init low value is {}, init mid value is {}, init high value is {}'.format(low, mid, high)) #test print
   print ('word index is {}'.format(myList.index(word))) #test print
   while high - low > 1:
     if myList[mid] == word:
-      print ('found the word ' + word + ' in here!')
+      print ('found the word ' + word + '!')
       break
     elif myList[mid] > word:
       high = mid
@@ -32,11 +32,10 @@ def binSearch(word):
       mid = (high+low)//2
       print ('low value is {}, mid value is {}, high value is {}'.format(low, mid, high)) #test print
     else:
-      print ('hmmm, something is terribly wrong here.')
+      print ('something is terribly wrong here.')
 
 def main():
-  binSearch('molly')
-
+  binSearch('overrun')
 
 
 if __name__=="__main__":

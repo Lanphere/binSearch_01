@@ -3,13 +3,14 @@ import re
 
 def readList():
   '''read a sorted txt into memory, eliminate some extra chars in txt'''
-  f = open('jargonStripped.txt', 'r')
+  f = open('jargonStrippedLower.txt', 'r')
   lines = f.readlines()
   jList = []
   for line in lines:
     match = re.search(r'(\w+)', line)
     jList.append(match.group(0))
   return jList
+  f.close()
 
 def binSearch(word):
   '''do a binary search'''
@@ -35,7 +36,7 @@ def binSearch(word):
       print ('something is terribly wrong here.')
 
 def main():
-  binSearch('overrun')
+  binSearch('lasherism')
 
 
 if __name__=="__main__":
